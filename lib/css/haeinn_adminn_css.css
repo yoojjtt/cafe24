@@ -1,0 +1,9 @@
+	
+	
+	.active{color:black;}
+	
+	a:link  { color:#000000; text-decoration:none;}
+	a{ color:#000000;text-decoration:none;}
+	a:hover { color:#FFA0A0; font-weight:none;}
+	a:active { color:#330033; text-decoration:none;}
+

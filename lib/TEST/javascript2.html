@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8".>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	
+
+ </head>
+
+ <body>
+	<form name="aform" method="post" >
+		<input type="text" name="mem_id" size="12" class="input">
+		<input type="password" name="passwd" size="12" class="input">	
+		<img src="" alt="로그인" onClick='check_in_union()'>
+	</form>
+	
+	<button onclick="myFunction()">Try it</button>
+	<p id="demo"></p>
+	<button id="test">test</button>
+	<button id="test2">test2</button>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><!-- jquery를 사용하려면 최상위에 적용해야한다.-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+
+
+		$('#test2').click(function(){
+		
+			alert('dd');
+		});
+	
+		
+		function IsID3(formname) 
+		{
+			 var form=eval("document.aform." + formname); //eval()문자열을 반환; ex) formname에 obj.mem_id.name이 오면 sun07x
+
+			 if(form.value.length < 4 || form.value.length > 12) {
+				 return false;
+			 }
+			 for(var i=0; i < form.value.length; i++) {
+				 var chr = form.value.substr(i,1);
+				 if((chr < '0' || chr > '9') && (chr < 'a' || chr > 'z')) {
+					return false;
+				 }
+			 }
+			 return true;
+
+		}
+
+		function check_in_union()
+		 {			
+			var obj
+			obj = document.aform
+
+			if (!obj.mem_id.value)
+			{
+				alert("아이디를  입력하세요!.")
+				obj.mem_id.focus()
+				return false
+			}
+	
+			if(!IsID3(obj.mem_id.name)) //document.obj의 mem_id name값을가진 input에 name값을 return 한다.
+			{
+				alert("ID는 4~12자의 영문 소문자, 숫자 또는 조합된 문자열이어야 합니다.")
+				obj.mem_id.focus()
+				return false
+			}
+
+			if (!obj.passwd.value)
+			{
+				alert("비밀번호를  입력하세요.")
+				obj.passwd.focus()
+				return false
+			}
+
+			obj.action = "./proc_union_login.php"
+			obj.submit()
+		}
+
+		function myFunction(formname) 
+		{	
+			var obj
+			obj = document.aform
+		
+				var x = obj.mem_id.name;
+				var y = document.aform.mem_id.value;
+				document.getElementById("demo").innerHTML = y;
+				return true
+			
+			
+
+
+
+		}
+		
+	
+	</script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	 <script>
+	 $('#test').click(function(){
+	 
+		alert('message');
+	 });
+	 </script>
+
+
+
+
+ </body>
+
+</html>

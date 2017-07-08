@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8".>
+ </head>
+
+ <body>
+	<ul>
+		<li><input type="button" onBlur="" onFocus="" onclick="onclick" value="button"/></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="alert_console_math_var()"  onclick="alert_console_math_var()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="login_basic_system()"  onclick="login_basic_system()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="boolean_fun()"  onclick="boolean_fun()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="document_loop_while()"  onclick="document_loop_while()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="document_loop_for()"  onclick="document_loop_for()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="document_loop_for_plus()"  onclick="document_loop_for_plus()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="loop_break_continue()"  onclick="loop_break_continue()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="loop_reiteration()"  onclick="loop_reiteration()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="function_numbering()"  onclick="function_numbering()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="function_return()"  onclick="function_return()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="function_argument()"  onclick="function_argument()"></li>
+		<li><input type="button" style="cursor:hand;width:90;"  value="function_argment2()"  onclick="function_argment2()"></li>
+		
+
+
+		
+		
+	<ul>
+
+	<script type="text/javascript">
+
+
+	function alert_console_math_var()
+	{
+
+        alert(2 * 5);  alert("coding everybody");     alert(6/2);
+        console.log(6/1);
+		alert(Math.pow(3,2));//경고창에 3의 제곱을 출력해라
+		console.log(Math.ceil(10.2));//수학 올림
+		console.log(Math.round(10.6));//반올림
+		console.log(Math.floor(10.1));// 수학 내림
+		console.log(Math.sqrt(9));//제곱근
+		console.log(Math.round(100*Math.random()));//랜덥에 곱하기100에 반올림
+		console.log(Math.random());
+		alert('coding everyday');
+		alert("Jong_tae");
+		alert('egoing\'s coding everyday');
+		alert("egoing\'s conding\n everyday");
+		console.log(typeof 1);//number
+		alert(typeof "1");//string
+		alert(1+1);
+		alert("coding"+"evryday");
+		console.log("coding every".length);// 문자열의 길이를 표현해준다 띄어쓰기 포함12
+		alert("code".indexOf("o"));
+		console.log("code".indexOf("o"));
+		alert("Keep going, starting variable from this line");
+
+		var a = 1;
+		alert(a+1);
+		
+		var first = "coding"
+		alert(first+"everyday");
+
+		var a ='coding', b = 'evryday'
+		alert(a+b);
+
+		a = 100;
+		a = a + 10;
+		alert(a);
+		a = a/10;
+		alert(a);
+		a = a - 10;
+		alert(a);
+		a = a * 10;
+		alert(a);	
+
+		alert(1 === "1");
+
+		var a = null;
+
+	}// END alert_console_math_var()
+    
+	
+	function login_basic_system()
+	{
+
+        alert(prompt("당신의 나이는?"));
+        
+        var id = prompt('아이디를 입력해주세요.');
+        if (id == 'egoing') {
+            alert('아이디가 일치 합니다.');
+            var password = prompt('비밀번호를 입력해주세요');
+            if (password == '111111') {
+                alert('로그인 하셨습니다.' +id+ '님 반갑습니다.')
+            }
+            else {
+                alert('비밀번호가 다릅니다.');
+            }
+            
+        }
+        else {
+            alert('아이디가 일치 하지 않습니다.');
+        }
+	//////////////////////////////////////////////////////////////////
+	
+		var id = prompt('아이디를 입력해주세요.');
+        var password = prompt('비밀번호를 입력해주세요');
+
+        if (id == 'egoing' && password == '111111') {
+                alert('로그인 하셨습니다.' +id+ '님 반갑습니다.')
+            } else {
+            alert('아이디가 일치 하지 않습니다.');
+        }
+
+
+		var id = prompt('아이디를 입력해주세요.');
+		var password = prompt('비밀번호를 입력해주세요');
+
+		if((id ==='egoing' || id === 'k8805' || id === 'sorialgi')&& password==='111111'){
+			alert('인증 했습니다.')
+		}else{
+			alert('인증에 실패 했습니다.')
+		}
+
+	}// END login_basic_system 
+	
+	
+
+
+	
+	function boolean_fun()
+	{
+		if(!true && !true){
+			alert(1);
+		}
+		if(!false && !false){
+			alert(1);
+		}
+		if(1){
+			alert(2);
+		}
+		if(!null){
+			alert(1);
+		}
+		if(!NaN){
+			alert(3);
+		}
+	} //END boolean_fun()
+	
+
+
+
+
+
+	
+	function document_loop_while()
+	{
+		var i = 0;
+		while(i < 10){
+		document.write("Coding everybody"+i+ "<br/>");
+		i = i + 1;//반복조건
+		}	
+		
+	} //END document_write
+
+
+	function document_loop_for()
+	{
+		for(var i=0; i < 10; i=i+1){
+		document.write("Coding everybody"+i+ "<br/>");
+	
+		} //END document_loop_for
+	}
+	function document_loop_for_plus()
+	{
+		var i = 0;
+		alert(++i);
+		for(var i=0; i<10; i++){
+			document.write("coding everybody"+ (i+1) + "<br />");
+
+		} 
+		console.log(i);
+			
+		var i = 0;
+		alert(i++);
+		alert(++i);
+	
+	} // END document_loop_for_plus
+	
+	
+	function loop_break_continue()
+	{
+		for(var i=0; i < 10; i++){
+		if(i===5){
+			break;//stop at 5
+		}
+		document.write("coding everybody"+i+"<br />");
+		}
+		for(var i=0; i < 10; i++){
+			if(i===5){
+				continue;// 5 stop and start again from at first.
+			}
+			document.write("coding everybody"+i+"<br />");
+		}
+	
+	}// END loop_break_continue()
+
+	function loop_reiteration()
+	{
+		for(var i=0; i < 10; i++){
+		for(var j=0; j < 10; j++){
+		document.write("coding everybody"+i+j+"<br />");
+		}
+		}//반목문의 중첩
+	
+	}//END loop_reiteration()
+
+
+
+	function function_numbering()
+	{	
+		/*
+		function 함수명([인자...[,인자]]){
+		코드
+		return 반환값
+		}
+		*/
+		function numbering(){
+			document.write(1);
+
+		}//함수를 정의한 것
+		numbering();// 뒤에()를 넣어야 함수로 인식하고 호출한다.
+		numbering();
+		numbering();
+		numbering();
+		numbering();//함수를 하나만 바꿔도 다른 적용된 함수가 다변한다.
+
+		var a = 1;//변수를 정의한 것
+		alert(a);//변수를 호출한 것
+
+		function numbering_2(){
+			var i = 0;
+			while(i < 20){
+				document.wrtie(i+"<br />");
+				i += 1;
+			}
+		}
+
+		for(var i = 0; i < 10; i++){
+			var i = 0;
+			while(i <20){
+				document.write(i+"<br />");
+				i += 1;
+			}
+		}
+	
+	
+	}// END function_numbering()
+	
+
+	function function_return()
+	{
+		function get_member1(){
+		return 'egoing';
+		return 'kathio';
+		return 'eclipse';
+		}
+
+		alert(get_member1());
+	}//END function_return()
+
+
+	function function_argument()
+	{
+		function get_argument(arg){
+		return arg*1000;
+		}
+		alert(get_argument(1));
+		alert(get_argument(2));
+	}//END function_argument()
+
+	
+	function function_argment2()
+	{
+		function get_arguments(arg1, arg2){
+		return arg1 + arg2;
+
+
+		}//단, 리턴값은 하나만 가질 수 있다.
+
+
+
+
+		alert(get_arguments(10, 20));
+		alert(get_arguments(20, 30));
+
+		numbering = function(){
+			i = 0;
+			while(i < 10){
+				document.write(i);
+				i += 1;
+			}
+		}
+
+		function numbering(){
+			i = 0;
+			while(i < 10){
+				document.write(i);
+				i += 1;
+			}	
+		}
+	
+	}//END function_argument2
+	
+</script>
+
+
+
+
+ </body>
+
+</html>

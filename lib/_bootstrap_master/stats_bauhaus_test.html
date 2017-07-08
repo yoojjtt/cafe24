@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Statistics</title>
+        <!-- Bootstrap -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+        <link href="assets/styles.css" rel="stylesheet" media="screen">
+
+    </head>
+    
+    <body>
+
+    <!-- morris bar & donut charts -->
+    <div class="row-fluid section">
+        <!-- block -->
+        <div class="block">
+            <div class="navbar navbar-inner block-header">
+                <div class="muted pull-left">Morris.js</div>
+            </div>
+            <div class="block-content collapse in">
+                <div class="span6 chart">
+                    <h5>Devices sold</h5>
+                    <div id="hero-bar" style="height: 250px;"></div>
+                </div>
+                <div class="span5 chart">
+                    <h5>Month traffic</h5>
+                    <div id="hero-donut" style="height: 250px;"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /block -->
+    </div>
+        <!--/.fluid-container-->
+        <link rel="stylesheet" href="vendors/morris/morris.css">
+
+
+        <script src="vendors/jquery-1.9.1.min.js"></script>
+        <script src="vendors/jquery.knob.js"></script>
+        <script src="vendors/raphael-min.js"></script>
+        <script src="vendors/morris/morris.min.js"></script>
+
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script>
+
+        $(function() {
+
+
+
+        });
+
+        // Morris Bar Chart
+        Morris.Bar({
+            element: 'hero-bar',
+            data: [
+                {device: '1', sells: 136},
+                {device: '3G', sells: 1037},
+                {device: '3GS', sells: 275},
+                {device: '4', sells: 380},
+                {device: '4S', sells: 6055},
+                {device: '5', sells: 10571}
+            ],
+            xkey: 'device',
+            ykeys: ['sells'],
+            labels: ['한글'],
+            barRatio: 0.4,
+            xLabelMargin: 10,
+            hideHover: 'auto',
+            barColors: ["#3d88ba"]
+        });
+
+
+        // Morris Donut Chart
+        Morris.Donut({
+            element: 'hero-donut',
+            data: [
+                {label: 'Direct', value: 25 },
+                {label: 'Referrals', value: 40 },
+                {label: 'Search engines', value: 25 },
+                {label: 'Unique visitors', value: 10 },
+                {label: 'Unique visitors', value: 10 },
+                {label: '한글도 되는지 테스트 ', value: 10 }
+            ],
+            colors: ["#30a1ec", "#76bdee", "#c4dafe", "#000", "#ddd"],
+            formatter: function (y) { return y + "%" }
+        });
+
+        </script>
+    </body>
+
+</html>
